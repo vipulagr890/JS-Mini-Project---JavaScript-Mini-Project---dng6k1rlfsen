@@ -1,7 +1,7 @@
 const grid = document.querySelector('.grid')
 const resultsDisplay = document.querySelector('.results')
 let currentShooterIndex = 202
-let width = 10
+let width = 15
 let direction = 1
 let invadersId
 let goingRight = true
@@ -27,17 +27,28 @@ function draw() {
       squares[alienInvaders[i]].classList.add('invader')
     }
   }
+
+  // alienInvaders.map(ele => {
+  //   if(!aliensRemoved.includes(ele)) {
+  //     squares[ele].classList.add('invader')
+  //   }
+  // })
 }
 
 draw()
 
 function remove() {
-  for (let i = 0; i < alienInvaders.length; i++) {
-    squares[alienInvaders[i]].classList.remove('invader')
-  }
+  // for (let i = 0; i < alienInvaders.length; i++) {
+  //   squares[alienInvaders[i]].classList.remove('invader')
+  // }
+
+  alienInvaders.map(ele => {
+    squares[ele].classList.remove('invader')
+  })
 }
 
 squares[currentShooterIndex].classList.add('shooter')
+
 
 function moveShooter(e) {
   squares[currentShooterIndex].classList.remove('shooter')
@@ -92,7 +103,7 @@ function moveInvaders() {
     }
   }
   if (aliensRemoved.length === alienInvaders.length) {
-    resultsDisplay.innerHTML = 'YOU WON'
+    resultsDisplay.innerHTML = 'YOU WIN'
     clearInterval(invadersId)
   }
 }
