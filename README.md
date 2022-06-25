@@ -4,6 +4,8 @@ The following space Invader is the re-implementation of space Invader by Japanes
 Space Invaders is a fixed shooter in which the player moves a laser cannon horizontally across the bottom of the screen and fires at aliens overhead.
 The space Invader game build in 1978 by Tomohiro Nishikado.
 
+![img](images/Space-Invaders.png)
+
 # Tech Stack :
 
 HTML, CSS, JS
