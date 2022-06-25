@@ -1,3 +1,7 @@
+*{
+    color: white;
+}
+
 body{
     height: 100%;
     width: 100%;
@@ -46,3 +50,6 @@ body{
     border-radius: 50px;
 }
 
+section{
+    padding-top: 50px;
+}
